@@ -1,7 +1,7 @@
 # Site settings
-title: Zheng (Zeni) Zhang's Portfolio
+title: Zeni's Portfolio
 description: Data Scientist & Analyst | BI Developer
-# baseurl: "/particle" # the subpath of your site, e.g. /blog
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
