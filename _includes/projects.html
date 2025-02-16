@@ -1,29 +1,170 @@
-<div class="user-details">
-  <h1> Featured Projects </h1>
-</div>
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
+<style>
+  .user-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .user-details h1 {
+    text-align: center;
+  }
+  
+  .user-projects {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .user-projects .images-right,
+  .user-projects .images-left {
+    width: 40%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .user-projects .images-right img,
+  .user-projects .images-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .user-projects .images-right img:hover,
+  .user-projects .images-left img:hover {
+    transform: scale(1.1);
+  }
+  
+  .user-projects .contents,
+  .user-projects .contents-right {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  .user-projects h3 {
+    color: #6842C2;
+    margin: 0 0 15px 0;
+  }
+  
+  .user-projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .user-projects li {
+    display: inline-block;
+    background: #f0ebfa;
+    color: #6842C2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 0.9em;
+  }
+  
+  .project-link {
+    display: inline-block;
+    background: #6842C2;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background: #5a39a8;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .user-projects {
+      flex-direction: column;
+    }
+    
+    .user-projects .images-right,
+    .user-projects .images-left,
+    .user-projects .contents,
+    .user-projects .contents-right {
+      width: 100%;
+    }
+    
+    .user-projects .images-right,
+    .user-projects .images-left {
+      height: 250px;
+    }
+  }
+  </style>
+  
+  <div class="user-details">
+    <h1>Featured Projects</h1>
   </div>
-  <div class="contents">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+  
+  <div class="user-projects">
+    <div class="images-right">
+      <img alt="Stock Data ETL Pipeline" src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
+    <div class="contents">
+      <h3>Stock Data ETL Pipeline & Dashboard</h3>
+      <ul>
+        <li>Python</li>
+        <li>Airflow</li>
+        <li>Google Cloud</li>
+      </ul>
+      <p>This project aimed to address the inefficiency of manual data retrieval and analysis in financial decision-making. I developed an automated system using Python to pull stock history, financial, and news data from the Yahoo Finance API. The system automates daily data extraction, allowing users to control tasks through an Airflow web server, transforms raw data into three structured tables, and loads them into a MySQL database. The entire system was deployed on Google Cloud, using Compute Engine for hosting. It also includes a stock history visualization dashboard and a newsletter page in Tableau for the latest updates.</p>
+      <a class="project-link" href="https://public.tableau.com/app/profile/zheng.zhang3017/viz/stock_etl_dashboard/STOCKHISTORY" target="_blank">Live Dashboard</a>
+      <a class="project-link" href="https://github.com/hgao62/zeni_backend_etl/tree/develop" target="_blank">View on GitHub</a>
+    </div>
   </div>
-</div>
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
+  
+  <div class="user-projects">
+    <div class="images-right">
+      <img alt="Sales Data Dashboard" src="https://plus.unsplash.com/premium_photo-1661270415926-37a9d24aff30?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
+    <div class="contents">
+      <h3>Sales Data Dashboard</h3>
+      <ul>
+        <li>Python</li>
+        <li>Plotly</li>
+        <li>Customer Segmentation</li>
+      </ul>
+      <p>In this project, I acted as a data scientist consultant to provide insights into sales operations for a UK online retail company. I developed a product sales distribution and customer behavior visualization dashboard using the Plotly package in Python. Additionally, I applied the RFM model and K-means clustering for customer segmentation, enabling the identification of customer loyalty patterns, potential high-value segments, and opportunities for targeted marketing strategies.</p>
+      <a class="project-link" href="https://www.canva.com/design/DAF_tuuPyjI/wz_uUG3i8WBF8Kts0nhRWg/view?utm_content=DAF_tuuPyjI&utm_campaign=designshare&utm_medium=link&utm_source=editor#1" target="_blank">Check it out</a>
+    </div>
   </div>
-  <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+  
+  <div class="user-projects">
+    <div class="images-right">
+      <img alt="Spatial Analysis" src="https://images.unsplash.com/photo-1647348627666-53a41904b712?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
+    <div class="contents">
+      <h3>Spatial Analysis in Habitat Suitability of the Horned Grebe in BC</h3>
+      <ul>
+        <li>R</li>
+        <li>Spatial Analysis</li>
+        <li>Predictive Modeling</li>
+      </ul>
+      <p>This research investigates the habitat preferences of the endangered Horned Grebein British Columbia, focusing on environmental factors such as elevation, forest cover, human impact, and water proximity. Using spatial statistical methods like Kernel Density Estimation, K-function, and predictive modeling, the study identifies hotspots and analyzes the species’ distribution patterns. Our findings indicate that the Horned Grebe prefers low-elevation wetlands with balanced forest coverage, and we recommend focusing conservation efforts on such regions while incorporating additional environmental variables to refine predictive models.</p>
+      <a class="project-link" href="https://docs.google.com/document/d/1e45xgolSQHXuWzovDyUZMtDU2O8DBHaInnC3NLuYt7s/edit?usp=sharing" target="_blank">Check it out</a>
+    </div>
   </div>
-</div>
+  
+  <div class="user-projects">
+    <div class="images-right">
+      <img alt="R Package" src="https://images.unsplash.com/photo-1581626221838-9715c0e06049?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
+    <div class="contents">
+      <h3>R Package for Carbon Intensity Data</h3>
+      <ul>
+        <li>R</li>
+        <li>Data Visualization</li>
+      </ul>
+      <p>The package helps users analyze and visualize carbon intensity across the United Kingdom. It uses real-time data and forecasts from the Carbon Intensity API to gather carbon emission statistics from different regions. Designed for educators, students, and environmental advocates, the package provides accessible tools for understanding and exploring carbon emission trends. This project is motivated by the need to address climate change by offering clear visualizations and simplifying data access, solving the problem of scattered information. Future enhancements could include integrating interactive learning modules, incorporating simulations for carbon reduction strategies, and expanding the scope to include global carbon data for broader educational impact.</p>
+      <a class="project-link" href="https://github.com/Rui1210/Data534_Project" target="_blank">View on GitHub</a>
+    </div>
+  </div>

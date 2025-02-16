@@ -1,8 +1,32 @@
 <footer class="footer">
-    <p>&copy; {{site.username}}</p>
-    <p>Build with Jekyll and <span class="love">❤</span> by <a href="https://github.com/nrandecker">Nathan Randecker</a></p>
+    <p>&copy; Zheng Zhang 2025</p>
+    <p>Build with <i class="fas fa-cat"></i> using <a href="https://jekyllrb.com/">Jekyll</a></p>
 </footer>
-<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-{% include google-analytics.html %}
+
+<style>
+.footer {
+    background: linear-gradient(135deg, #2D1B69 0%, #6842C2 100%);  /* 紫色渐变背景 */
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    color: white;
+    font-size: 14px;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+</style>

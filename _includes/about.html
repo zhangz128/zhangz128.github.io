@@ -1,30 +1,244 @@
  <div class="user-details">
-  <h1> My Expertise </h1>
+  <h1> About Me </h1>
   <p> {{site.user_description}} </p>
 </div>
-  <div class="user">
-    <div class="tech">
-      <h2>Design</h2>
-      <i class="devicon-html5-plain-wordmark"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-sass-original colored"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+
+<div class="experience-section">
+  <h1 style="text-align: center; margin-bottom: 40px;">Experience</h1>
+  
+  <div class="timeline">
+    <!-- UBC Capstone Project -->
+    <div class="timeline-item">
+      <div class="timeline-date">May 2024 - Jun 2024</div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <h3>Data Scientist - Capstone Project</h3>
+          <h4>Greenspace Health · Internship</h4>
+          <p class="location">Kelowna, BC, Canada</p>
+          <ul>
+            <li>Enhanced therapist-patient matching on Python for a clinic management platform, leveraging SQL queries on 1M+ records from Snowflake and machine learning models, leading to a projected 5% improvement in patient satisfaction (TA Score)</li>
+            <li>Applied Random Forest regression for predictive modeling to identify key factors influencing TA Score, such as first session feedback score, assessment completion rates, and multiple match attempts</li>
+            <li>Designed a clustering-based scoring mechanism to optimize initial therapist-patient assignments, minimizing manual bias and boosting patient participation</li>
+            <li>Collaborated with cross-functional teams, including engineering and project management, to integrate insights into the platform, delivering a data-driven decision-making framework for clinics</li>
+          </ul>
+          <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Feature Engineering</span>
+            <span class="skill-tag">Data Modelling</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="tech">
-      <h2>Code</h2>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-nodejs-plain-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+
+    <!-- Data Science Intern -->
+    <div class="timeline-item">
+      <div class="timeline-date">May 2023 - Aug 2023</div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <h3>Data Science Intern</h3>
+          <h4>Henan Institute of Geophysical Spatial Information Co., Ltd</h4>
+          <p class="location">Zhengzhou, China</p>
+          <ul>
+            <li>Upgraded an automated land classification model within a GIS SaaS platform, increasing classification accuracy by 4% to support platform analytics and decision-making for environmental monitoring and urban planning</li>
+            <li>Refined model performance by assessing misclassified land types, optimizing feature selection, and adjusting hyperparameters (e.g., learning rate, batch size) in a deep learning framework for more precise land-use categorization</li>
+          </ul>
+          <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Model Fine-tuning</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-git-plain"></i>
-      <i class="devicon-gulp-plain colored"></i>
-      <i class="devicon-atom-original-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+
+    <!-- Sales Analyst -->
+    <div class="timeline-item">
+      <div class="timeline-date">May 2021 - Sep 2021</div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <h3>Sales Analyst</h3>
+          <h4>Worhe International (Hong Kong) Co.,Limited</h4>
+          <p class="location">Dongguan, China</p>
+          <ul>
+            <li>Streamlined the acquisition and consolidation of multi e-commerce platform data with VBA, generated Power BI to track sales trend and marketing impact, reducing manual processing time by 80% and enabling real-time strategic decision-making</li>
+            <li>Conceptualized A/B tests to run statistical tests on SEO indicator, measuring click-through rates and keyword effectiveness, restructured the product listings to strengthen visibility and user affinity, leading to a 30% increase in conversion rate</li>
+            <li>Performed pricing sensitivity and elasticity assessments to develop data-informed promotional strategies by identifying high-sensitivity products, led to a 20% growth in weekly sales volume</li>
+          </ul>
+          <div class="skills">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">A/B Testing</span>
+            <span class="skill-tag">Statistical Analysis</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<style>
+.experience-section {
+  padding: 50px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #6842C2; 
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.timeline-date {
+  background: #6842C2; 
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 0 20px;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 45%;
+  margin-left: 20px;
+}
+
+.timeline-card h3 {
+  color: #6842C2; 
+  margin: 0 0 5px 0;
+}
+
+.timeline-card h4 {
+  color: #666;
+  margin: 0 0 5px 0;
+  font-weight: normal;
+}
+
+.location {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-card li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #f0ebfa;
+  color: #6842C2; 
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+  
+  .timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+</style>
+
+<div class="user-details">
+  <h1>Education</h1>
+</div>
+
+<div class="experience-section">
+  <div class="timeline">
+    <!-- University of British Columbia -->
+    <div class="timeline-item">
+      <div class="timeline-date">Sep 2023 - Jun 2024</div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <h3>Master of Data Science</h3>
+          <h4>University of British Columbia</h4>
+          <p class="location">Kelowna, BC, Canada</p>
+          <ul>
+            <li>Specialized in advanced machine learning techniques and data analytics</li>
+            <li>Developed comprehensive projects leveraging Python, SQL, and cloud computing platforms</li>
+            <li>Completed coursework in statistical modeling, deep learning, and data visualization</li>
+          </ul>
+          <div class="skills">
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Data Analytics</span>
+            <span class="skill-tag">Statistical Modeling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Undergraduate Degree -->
+    <div class="timeline-item">
+      <div class="timeline-date">Sep 2019 - Jun 2023</div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <h3>Bachelor of Science in Mathematics and Statistics</h3>
+          <h4>McMaster University</h4>
+          <p class="location">Hamilton, ON, Canada</p>
+          <ul>
+            <li>Majored in Statistics with a focus on data science and computational methods</li>
+            <li>Achieved Dean's Honour List recognition for academic excellence</li>
+            <li>Completed significant research projects in data analysis and predictive modeling</li>
+          </ul>
+          <div class="skills">
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Research</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
