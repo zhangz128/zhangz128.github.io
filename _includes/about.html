@@ -1,3 +1,141 @@
+<style>
+  * {
+    font-family: Arial, sans-serif;
+  }
+  
+  .user-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .user-details h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .experience-section {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #6842C2; 
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .timeline-date {
+    background: #6842C2; 
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 45%;
+    margin-left: 20px;
+  }
+  
+  .timeline-card h3 {
+    color: #6842C2; 
+    margin: 0 0 5px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline-card h4 {
+    color: #666;
+    margin: 0 0 5px 0;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+  }
+  
+  .location {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline-card li {
+    margin-bottom: 8px;
+    color: #444;
+    font-family: Arial, sans-serif;
+  }
+  
+  .skills {
+    margin-top: 15px;
+  }
+  
+  .skill-tag {
+    display: inline-block;
+    background: #f0ebfa;
+    color: #6842C2; 
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline::before {
+      left: 30px;
+    }
+    
+    .timeline-item {
+      flex-direction: column;
+    }
+    
+    .timeline-content {
+      width: calc(100% - 60px);
+      margin-left: 60px;
+    }
+    
+    .timeline-date {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+    }
+  }
+  </style>
+ 
  <div class="user-details">
   <h1> About Me </h1>
   <p> {{site.user_description}} </p>
